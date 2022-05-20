@@ -13,11 +13,14 @@ import (
 var (
 	decodeIt bool
 	str      string
+	isUrl    bool
 )
 
 func main() {
-	flag.BoolVar(&decodeIt, "decode", false, "Decode string instead of encoding")
-	flag.StringVar(&str, "str", "", "the string to encode/decode")
+	flag.BoolVar(&decodeIt, "d", false, "decode string")
+	// TODO: Implement base64.URLEncoding.EncodeToString()
+	flag.BoolVar(&isUrl, "u", false, "use url encoding")
+	flag.StringVar(&str, "s", "", "the string to encode/decode")
 	flag.Parse()
 
 	if str != "" {

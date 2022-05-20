@@ -2,13 +2,20 @@
 
 `b64` is a small command line utility for encoding and decoding base64 strings.
 
-## Installation
+## Install
 
 ```bash
 go install github.com/madsaune/b64@latest
 ```
 
 ## Usage
+
+```bash
+Usage of b64:
+  -d    decode string
+  -s string
+        the string to encode/decode
+```
 
 ### Encoding
 
@@ -20,7 +27,7 @@ $ echo "my_string" > test.txt
 $ b64 < test.txt
 bXlfc3RyaW5n
 
-$ b64 --str "my_string"
+$ b64 -s "my_string"
 bXlfc3RyaW5n
 
 $ b64
@@ -32,17 +39,17 @@ bXlfc3RyaW5n
 ### Decoding
 
 ```bash
-$ echo "bXlfc3RyaW5n" | b64 --decode
+$ echo "bXlfc3RyaW5n" | b64 -d
 my_string
 
 $ echo "bXlfc3RyaW5n" > test.txt
-$ b64 --decode < test.txt
+$ b64 -d < test.txt
 my_string
 
-$ b64 --str "bXlfc3RyaW5n" --decode
+$ b64 -s "bXlfc3RyaW5n" -d
 my_string
 
-$ b64 --decode
+$ b64 -d
 bXlfc3RyaW5n<CR>
 <CTRL+D>
 my_string
