@@ -42,7 +42,7 @@ my_string
 $ b64 --str "bXlfc3RyaW5n" --decode
 my_string
 
-$ b64
+$ b64 --decode
 bXlfc3RyaW5n<CR>
 <CTRL+D>
 my_string
