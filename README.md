@@ -22,6 +22,11 @@ bXlfc3RyaW5n
 
 $ b64 --str "my_string"
 bXlfc3RyaW5n
+
+$ b64
+my_string<CR>
+<CTRL+D>
+bXlfc3RyaW5n
 ```
 
 ### Decoding
@@ -35,5 +40,10 @@ $ b64 --decode < test.txt
 my_string
 
 $ b64 --str "bXlfc3RyaW5n" --decode
+my_string
+
+$ b64
+bXlfc3RyaW5n<CR>
+<CTRL+D>
 my_string
 ```
